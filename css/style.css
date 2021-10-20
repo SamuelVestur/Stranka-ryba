@@ -5,6 +5,7 @@ html {
 
 body {
   color: #222;
+  background: url("../img/gradient.png") left top repeat-x;
   font: 18px/30px Georgia, serif;
   width: 960px;
   margin: 0 auto;
@@ -68,10 +69,19 @@ p {
   width: 960px;
   height: 105px;
   text-indent: -9999px;
+  visibility: hidden;
 }
 
 .cover {
-  background: #fff url("../img/background.jpg") 50% 0px no-repeat;
+  /* background: #fff url("../img/background.jpg") 50% 0px no-repeat; */
+
+  /* Skrateny zapis toho background*/
+  /* background-color: #bada55;
+  background-image: url("../img/author.png");
+  background-position: 0 0;
+  background-repeat: repeat-x; */
+
+  display: none;
   height: 470px;
   margin-top: -85px;
   position: relative;
@@ -223,6 +233,11 @@ p {
 .post-footer {
   width: 700px;
   margin: 60px auto;
+  background: #bada55;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  margin-left: -350px;
 }
 
 .post-footer h3 {
@@ -326,18 +341,30 @@ code {
   text-align: center;
 }
 
+header code {
+  background: #d63d49;
+}
+footer code {
+  background: #3d3031;
+}
+aside code {
+  background: #d6d23d;
+}
+
 #wrapper {
   width: 700px;
   margin: 0 auto;
-  background: #bada55;
+  /* background: #bada55; */
+  position: relative;
 }
 
 #wrapper header,
 #wrapper section,
 #wrapper aside,
 #wrapper footer {
-  visibility: hidden;
+  /* visibility: hidden; */
   margin: 0 0 25px;
+  opacity: 0.8;
 }
 
 #wrapper aside {
@@ -347,28 +374,28 @@ code {
 #wrapper section {
   float: left;
   width: 425px;
+  position: relative;
+  bottom: 70px;
+
+  z-index: 4;
 }
 
 #wrapper aside {
   float: right;
   width: 250px;
+  position: absolute;
+  top: 58px;
+  left: 0px;
+
+  z-index: 1;
+}
+
+#wrapper header {
+  position: relative;
+  z-index: 3;
 }
 
 /*#wrapper footer {
 	clear: both;
 }
 */
-
-.group:before,
-.group:after {
-  content: " ";
-  display: table;
-}
-
-.group:after {
-  clear: both;
-}
-
-.group {
-  *zoom: 1;
-}
