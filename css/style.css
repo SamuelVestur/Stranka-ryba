@@ -5,7 +5,8 @@ html {
 
 body {
   color: #222;
-  background: url("../img/gradient.png") left top repeat-x;
+  background-image: linear-gradient(to bottom, #bbda55 0%, #ffffff 73%);
+
   font: 18px/30px Georgia, serif;
   width: 960px;
   margin: 0 auto;
